@@ -1,0 +1,109 @@
+Levantamento.bat
+
+Objetivo:
+
+O objetivo do levantamento.bat é coletar uma variedade de informações de um computador, como especificações de hardware, configurações de rede, dados do sistema operacional e outros parâmetros críticos, e registrar esses dados em uma planilha do Excel chamada Inventario.xlsx.
+
+Funcionalidade:
+
+Configuração inicial:
+
+O script inicia com a definição de chcp 65001 para garantir que a codificação UTF-8 seja utilizada, permitindo a manipulação de caracteres especiais corretamente.
+
+O título e a descrição do script são exibidos, indicando que o processo se trata de um coletor de inventário e que as informações serão adicionadas ao arquivo Inventario.xlsx.
+
+Verificação e instalação do módulo ImportExcel:
+
+O script verifica se o módulo ImportExcel está instalado no PowerShell. Este módulo é necessário para exportar dados para o formato Excel. Caso não esteja instalado, o script o instala automaticamente, usando o comando Install-Module ImportExcel.
+
+Coleta de informações do sistema:
+
+O script utiliza o PowerShell para coletar uma série de informações sobre o sistema. Ele coleta dados sobre o computador, o sistema operacional, o processador, a memória RAM, o disco rígido, a placa de vídeo (GPU), a rede e o usuário atual.
+
+Aqui estão algumas das informações que são coletadas:
+
+Nome do PC, Usuário Logado, Fabricante, Modelo, Número de Série do PC, Versão do BIOS/UEFI, Sistema Operacional (incluindo versão e build), CPU (com número de núcleos e threads), Memória RAM (total e livre), Disco rígido (modelo, total e livre), GPU (placa de vídeo), Endereço IP, Endereço MAC, Gateway, e Servidores DNS.
+
+Formatação dos dados:
+
+Todos os dados coletados são organizados em um objeto PSCustomObject, com chaves representando os nomes das informações (por exemplo, "Nome do PC", "Usuario Logado", "RAM Total (GB)", etc.) e os valores representando os dados reais extraídos do sistema.
+
+Exportação para o Excel:
+
+O script verifica se o arquivo Inventario.xlsx já existe. Se o arquivo já estiver presente, o script adiciona uma nova linha com os dados coletados à planilha existente. Caso contrário, ele cria um novo arquivo Excel e adiciona a primeira linha de dados.
+
+A planilha é criada ou atualizada utilizando o Export-Excel, que faz parte do módulo ImportExcel.
+
+Finalização:
+
+Após a coleta e exportação dos dados, o script exibe uma mensagem informando que o inventário foi atualizado com sucesso.
+
+O script espera que o usuário pressione qualquer tecla para fechar o processo.
+
+Resumo das Ações Realizadas pelo Script
+
+Instalação e verificação do módulo ImportExcel:
+
+O script garante que o módulo necessário para exportar dados para Excel esteja disponível.
+
+Coleta de informações do computador:
+
+O script coleta dados detalhados sobre o sistema, como hardware, software e configuração de rede.
+
+Exportação de dados para o arquivo Excel:
+
+O script cria ou atualiza o arquivo Inventario.xlsx, adicionando as informações coletadas em uma nova linha.
+
+Interação com o usuário:
+
+Ao final, o script informa o sucesso do processo e aguarda uma interação do usuário para encerrar.
+
+Exemplo de Informações Coletadas
+
+Nome do PC: PC01
+
+Usuário Logado: João
+
+Fabricante: Dell
+
+Modelo do PC: XPS 15
+
+Número de Série: ABC12345
+
+Versão do BIOS/UEFI: 1.0.0
+
+Windows: Windows 10 Pro
+
+CPU: Intel Core i7-9700
+
+Número de Núcleos: 8
+
+Número de Threads: 8
+
+RAM Total (GB): 16 GB
+
+RAM Livre (GB): 8.2 GB
+
+Modelo do Disco: Samsung SSD 970 EVO
+
+Disco Total (GB): 500 GB
+
+Disco Livre (GB): 250 GB
+
+GPU: NVIDIA GeForce GTX 1650
+
+IP: 192.168.1.5
+
+MAC: 00:14:22:01:23:45
+
+Gateway: 192.168.1.1
+
+DNS: 8.8.8.8, 8.8.4.4
+
+Benefícios de Utilizar o Levantamento.bat
+
+Automação: O script automatiza a coleta de informações de inventário, economizando tempo para os administradores de TI.
+
+Facilidade de uso: Com um simples comando, o script coleta e organiza os dados no formato Excel, o que facilita a análise e o armazenamento.
+
+Flexibilidade: O script pode ser adaptado para coletar mais informações ou exportar para outros formatos de dados, caso necessário.
