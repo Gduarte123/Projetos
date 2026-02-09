@@ -1,0 +1,11 @@
+O arquivo Dominio.bat é um script automatizado desenvolvido para facilitar tarefas de administração de computadores em ambientes Windows, especialmente em redes corporativas que utilizam domínio Active Directory. Ele apresenta ao usuário um menu com quatro opções principais: alterar o nome da máquina, ingressar o computador no domínio, remover o computador do domínio ou sair do script.
+
+Ao escolher a opção 1, o usuário pode alterar o nome do computador. O script solicita o novo nome e executa o comando correspondente via WMIC para renomear a máquina. Após a alteração, exibe uma mensagem de sucesso e retorna ao menu principal.
+
+Na opção 2, o script permite colocar o computador no domínio. O usuário informa o nome do domínio desejado e, antes de prosseguir, o script oferece a possibilidade de ativar a conta de administrador local do Windows, caso seja necessário. Em seguida, ele solicita as credenciais do domínio e utiliza um comando em PowerShell para adicionar o computador ao domínio, reiniciando a máquina automaticamente após o procedimento.
+
+Já a opção 3 remove o computador do domínio, retornando-o para um grupo de trabalho padrão chamado “WORKGROUP”. Para isso, o script utiliza comandos WMIC para desfazer o vínculo com o domínio e ingressar novamente no grupo de trabalho. Após concluir a operação, apresenta uma mensagem informando o sucesso da remoção e pergunta ao usuário se deseja reiniciar o computador para aplicar totalmente as alterações.
+
+Por fim, a opção 4 encerra o script. Se o usuário inserir uma opção inválida, o script exibe um aviso e retorna ao menu inicial, garantindo que apenas comandos válidos sejam executados.
+
+O objetivo geral do Dominio.bat é automatizar e simplificar processos administrativos comuns em ambientes de TI, reduzindo erros e agilizando o gerenciamento de máquinas no domínio.
