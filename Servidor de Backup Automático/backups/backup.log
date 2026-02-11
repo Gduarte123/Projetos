@@ -1,0 +1,24 @@
+Iniciando backup em 2026-02-11_16-54-58
+sending incremental file list
+dados_importantes/
+dados_importantes/backup.txt
+dados_importantes/projeto.txt
+
+sent 264 bytes  received 58 bytes  644,00 bytes/sec
+total size is 48  speedup is 0,15
+Backup finalizado em qua 11 fev 2026 16:54:58 -03
+----------------------------------------
+Iniciando backup em 2026-02-11_17-03-57
+  adding: home/gabriel/dados_importantes/ (stored 0%)
+  adding: home/gabriel/dados_importantes/backup.txt (stored 0%)
+  adding: home/gabriel/dados_importantes/projeto.txt (stored 0%)
+Backup compactado e protegido por senha.
+Finalizado em qua 11 fev 2026 17:03:57 -03
+----------------------------------------
+Iniciando backup em 2026-02-11_17-06-47
+  adding: home/gabriel/dados_importantes/ (stored 0%)
+  adding: home/gabriel/dados_importantes/backup.txt (stored 0%)
+  adding: home/gabriel/dados_importantes/projeto.txt (stored 0%)
+Backup compactado e protegido por senha.
+Finalizado em qua 11 fev 2026 17:06:47 -03
+----------------------------------------
